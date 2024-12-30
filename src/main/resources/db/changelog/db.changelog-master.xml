@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Migration for dashboards -->
+    <changeSet id="1" author="curtis">
+        <sqlFile path="db/migrations/001_create_dashboards.sql"/>
+    </changeSet>
+
+    <!-- Migration for indicators -->
+    <changeSet id="2" author="curtis">
+        <sqlFile path="db/migrations/002_create_indicators.sql"/>
+    </changeSet>
+
+    <!-- Migration for metrics -->
+    <changeSet id="3" author="curtis">
+        <sqlFile path="db/migrations/003_create_metrics.sql"/>
+    </changeSet>
+
+    <!-- Migration for battery_info -->
+    <changeSet id="4" author="curtis">
+        <sqlFile path="db/migrations/004_create_battery_info.sql"/>
+    </changeSet>
+
+    <!-- Migration for indexes -->
+    <changeSet id="5" author="curtis">
+        <sqlFile path="db/migrations/005_add_indexes.sql"/>
+    </changeSet>
+</databaseChangeLog>
