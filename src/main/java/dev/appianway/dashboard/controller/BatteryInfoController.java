@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
+// BatteryInfoController fora REST controller class that handles HTTP requests related to battery information.
 @RestController
 @RequestMapping("/dashboards/{dashboardId}/battery-info")
 public class BatteryInfoController {

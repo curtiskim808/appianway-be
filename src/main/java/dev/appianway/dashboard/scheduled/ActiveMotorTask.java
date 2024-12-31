@@ -14,7 +14,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+// This Scheduled task simulates the motor being active and updates the battery metrics.
 @Component
 public class ActiveMotorTask {
 
@@ -24,31 +24,20 @@ public class ActiveMotorTask {
         this.schedulerController = schedulerController;
     }
 
-    @Value("${dashboard.battery.max-capacity}")
-    private Float maxBatteryCapacity;
     @Value("${dashboard.battery.min-capacity}")
     private Float minBatteryCapacity;
-    @Value("${dashboard.battery.increment-capacity}")
-    private Float batteryIncrementCapacity;
     @Value("${dashboard.battery.decrement-capacity}")
     private Float batteryDecrementCapacity;
     @Value("${dashboard.battery.max-temperature}")
     private Float maxBatteryTemperature;
-    @Value("${dashboard.battery.min-temperature}")
-    private Float minBatteryTemperature;
     @Value("${dashboard.battery.increment-temperature}")
     private Float batteryIncrementTemperature;
-    @Value("${dashboard.battery.decrement-temperature}")
-    private Float batteryDecrementTemperature;
 
     @Autowired
     private DashboardService dashboardService;
 
     @Autowired
     private BatteryInfoService batteryInfoService;
-
-    @Autowired
-    private MetricService metricService;
 
     @Autowired
     private SimpMessagingTemplate messagingTemplate;

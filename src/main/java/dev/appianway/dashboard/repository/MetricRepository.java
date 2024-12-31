@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+// MetricRepository for to manage metrics.
 @Repository
 public interface MetricRepository extends JpaRepository<Metric, Long> {
     List<Metric> findByDashboard(Dashboard dashboard);

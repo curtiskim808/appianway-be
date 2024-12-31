@@ -15,7 +15,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
+// MetricController for a REST controller class that handles HTTP requests related to metrics.
 @RestController
 @RequestMapping("/dashboards/{dashboardId}/metrics")
 public class MetricController {

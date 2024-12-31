@@ -11,7 +11,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+// MetricService for to manage metrics.
 @Service
 public class MetricService {
     @Value("${dashboard.metric.motor-max-rpm}")

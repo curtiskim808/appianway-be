@@ -9,7 +9,7 @@ import dev.appianway.dashboard.model.entity.Metric;
 import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.UUID;
-
+// Dashboard entity for to define the structure of the dashboard.
 @Entity
 @Table(name = "dashboards")
 @Getter

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-
+// DashboardRepository for to manage dashboards.
 @Repository
 public interface DashboardRepository extends JpaRepository<Dashboard, String> {
     @Query("SELECT DISTINCT d FROM Dashboard d JOIN d.indicators i WHERE i.type = 'BATTERY_CHARGING' AND i.status = true")

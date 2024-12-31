@@ -16,7 +16,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
+// IndicatorController for a REST controller class that handles HTTP requests related to indicators.
 @RestController
 @RequestMapping("/dashboards/{dashboardId}/indicators")
 public class IndicatorController {

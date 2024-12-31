@@ -4,7 +4,7 @@ import lombok.*;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
-
+// Metric entity for to define the metric of the dashboard.
 @Entity
 @Table(name = "metrics")
 @Getter

@@ -14,7 +14,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+// This Scheduled task simulates the battery charging and updates the battery metrics.
 @Component
 public class BatteryChargingTask {
     private final SchedulerController schedulerController;

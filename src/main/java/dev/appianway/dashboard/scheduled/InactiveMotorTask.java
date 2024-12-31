@@ -13,7 +13,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+// This scheduled task simulates the motor being inactive and updates the battery metrics.
 @Component
 public class InactiveMotorTask {
     private final SchedulerController schedulerController;

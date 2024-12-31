@@ -81,18 +81,6 @@ class DashboardControllerTest {
     }
 
     @Test
-    void createDashboard() throws Exception {
-        Dashboard dashboard = new Dashboard();
-        String uuid = "3abw1339-3e5f-4e77-96ba-1cc94a0467e8";
-        dashboard.setUuid(uuid);
-
-        when(dashboardService.saveDashboard(dashboard)).thenReturn(dashboard);
-
-        mockMvc.perform(post("/dashboards").contentType(MediaType.APPLICATION_JSON_VALUE).content("{\"uuid\":\"" + uuid + "\"}"))
-                .andExpect(status().isOk());
-    }
-
-    @Test
     void setupInitialData() throws Exception {
         doNothing().when(initialSetupService).setupInitialData();
 

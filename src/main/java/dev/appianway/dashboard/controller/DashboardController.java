@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.UUID;
-
+// DashboardController for a REST controller class that handles HTTP requests related to dashboards.
 @RestController
 @RequestMapping("/dashboards")
 public class DashboardController {
@@ -39,11 +39,6 @@ public class DashboardController {
         return dashboardService.getDashboard(uuid)
                 .map(dashboard -> ResponseEntity.ok(new DashboardDTO(dashboard)))
                 .orElse(ResponseEntity.notFound().build());
-    }
-
-    @PostMapping
-    public ResponseEntity<Dashboard> createDashboard(@RequestBody Dashboard dashboard) {
-        return ResponseEntity.ok(dashboardService.saveDashboard(dashboard));
     }
 
     @DeleteMapping("/{uuid}")

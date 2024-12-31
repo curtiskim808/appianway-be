@@ -5,7 +5,7 @@ import lombok.*;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-
+// BatteryInfo Entity for to store battery information.
 @Entity
 @Table(name = "battery_info")
 @Getter

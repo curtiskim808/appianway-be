@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
-
+// BatteryInfoService for to manage battery info.
 @Service
 public class BatteryInfoService {
 

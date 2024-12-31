@@ -4,7 +4,7 @@ import dev.appianway.dashboard.model.entity.Dashboard;
 import lombok.Builder;
 
 import java.time.LocalDateTime;
-
+// DashboardDTO for to transfer data between a remote client and the server.
 public class DashboardDTO {
     private String uuid;
     private String name;

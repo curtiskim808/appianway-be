@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
-
+// DashboardService for to manage dashboards.
 @Service
 public class DashboardService {
 

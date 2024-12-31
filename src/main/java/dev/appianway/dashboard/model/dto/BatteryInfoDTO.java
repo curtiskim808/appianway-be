@@ -5,7 +5,7 @@ import dev.appianway.dashboard.model.entity.BatteryInfoType;
 import lombok.Builder;
 
 import java.time.LocalDateTime;
-
+// BatteryInfoDTO for to transfer data between a remote client and the server.
 public class BatteryInfoDTO {
     private Long id;
     private String dashboardUuid;

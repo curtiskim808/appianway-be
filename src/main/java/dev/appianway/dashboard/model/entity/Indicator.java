@@ -4,7 +4,7 @@ import lombok.*;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
-
+// Indicator entity for to define the type of indicator.
 @Entity
 @Table(name = "indicators")
 @Getter

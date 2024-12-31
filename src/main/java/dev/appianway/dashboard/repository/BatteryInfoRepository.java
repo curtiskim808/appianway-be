@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+// BatteryInfoRepository for to manage battery information.
 @Repository
 public interface BatteryInfoRepository extends JpaRepository<BatteryInfo, Long> {
     List<BatteryInfo> findByDashboard(Dashboard dashboard);

@@ -5,7 +5,7 @@ import dev.appianway.dashboard.model.entity.MetricType;
 import lombok.Builder;
 
 import java.time.LocalDateTime;
-
+// MetricDTO for to transfer data between a remote client and the server.
 public class MetricDTO {
     private Long id;
     private String dashboardUuid;

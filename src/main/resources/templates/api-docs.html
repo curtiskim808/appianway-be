@@ -32,6 +32,13 @@
             color: #dc3545;
             font-weight: bold;
         }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
     </style>
 </head>
 <body>
@@ -43,17 +50,22 @@
             <th>Method</th>
             <th>Path</th>
             <th>Description</th>
+            <th>Example Result</th>
         </tr>
         </thead>
-        <tbody>
         <tr th:each="endpoint : ${endpoints}">
             <td>
-                        <span th:class="${'method-' + endpoint.method.toLowerCase()}"
-                              th:text="${endpoint.method}">GET</span>
+                <span th:class="${'method-' + endpoint.method.toLowerCase()}"
+                      th:text="${endpoint.method}">GET</span>
             </td>
             <td th:text="${endpoint.path}">/api/path</td>
             <td th:text="${endpoint.description}">Description</td>
+
+            <td>
+                <pre th:utext="${#strings.escapeXml(endpoint.exampleResult).replace('\n', '<br/>').replace(' ', '&nbsp;').replace('{', '{<br/>&nbsp;&nbsp;&nbsp;&nbsp;').replace('}', '<br/>}').replace(',', ',<br/>&nbsp;&nbsp;&nbsp;&nbsp;')}">Example</pre>
+            </td>
         </tr>
+
         </tbody>
     </table>
 </div>
