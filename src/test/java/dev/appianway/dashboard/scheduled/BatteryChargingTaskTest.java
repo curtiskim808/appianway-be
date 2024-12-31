@@ -35,7 +35,7 @@ class BatteryChargingTaskTest {
         batteryInfoService = mock(BatteryInfoService.class);
         messagingTemplate = mock(SimpMessagingTemplate.class);
 
-        batteryChargingTask = new BatteryChargingTask(schedulerController);
+        batteryChargingTask = new BatteryChargingTask(schedulerController, dashboardService, batteryInfoService, messagingTemplate);
         // Inject mocks
         ReflectionTestUtils.setField(batteryChargingTask, "dashboardService", dashboardService);
         ReflectionTestUtils.setField(batteryChargingTask, "batteryInfoService", batteryInfoService);
