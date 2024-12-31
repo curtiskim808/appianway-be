@@ -41,8 +41,8 @@ public class BatteryChargingTask {
     }
 
 
-    // Runs every 30 second
-    @Scheduled(fixedDelayString = "${task.battery-charging.delay:30000}")
+    // Runs every 60 second
+    @Scheduled(fixedDelayString = "${task.battery-charging.delay:60000}")
     @Async("taskExecutor")
     public void updateBatteryMetrics() {
         try {

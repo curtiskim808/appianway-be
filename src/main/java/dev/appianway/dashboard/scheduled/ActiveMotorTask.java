@@ -48,9 +48,9 @@ public class ActiveMotorTask {
         this.messagingTemplate = messagingTemplate;
     }
 
-    // Runs every 30 seconds
+    // Runs every 60 seconds
     @Async("taskExecutor")
-    @Scheduled(fixedDelayString = "${task.active-motor.delay:30000}")
+    @Scheduled(fixedDelayString = "${task.active-motor.delay:60000}")
     public void updateBatteryMetrics() {
         try {
             if (!schedulerController.isReadyToStart()) {

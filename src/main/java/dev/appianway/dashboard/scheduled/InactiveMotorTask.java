@@ -39,7 +39,7 @@ public class InactiveMotorTask {
         this.messagingTemplate = messagingTemplate;
     }
 
-    // Runs every 13 second
+    // Runs every 120 second
     @Scheduled(fixedDelayString = "${task.inactive-motor.delay:120000}")
     @Async("taskExecutor")
     public void updateBatteryMetrics() {
