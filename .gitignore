@@ -32,3 +32,32 @@ build/
 ### VS Code ###
 .vscode/
 .env
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA files
+.idea/
+
+# macOS files
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Environment variables
+*.env

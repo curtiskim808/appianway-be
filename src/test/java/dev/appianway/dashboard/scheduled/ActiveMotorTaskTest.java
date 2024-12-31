@@ -23,7 +23,6 @@ class ActiveMotorTaskTest {
     private SchedulerController schedulerController;
     private DashboardService dashboardService;
     private BatteryInfoService batteryInfoService;
-    private MetricService metricService;
     private SimpMessagingTemplate messagingTemplate;
 
     private ActiveMotorTask activeMotorTask;
@@ -33,25 +32,19 @@ class ActiveMotorTaskTest {
         schedulerController = mock(SchedulerController.class);
         dashboardService = mock(DashboardService.class);
         batteryInfoService = mock(BatteryInfoService.class);
-        metricService = mock(MetricService.class);
         messagingTemplate = mock(SimpMessagingTemplate.class);
 
         activeMotorTask = new ActiveMotorTask(schedulerController);
         // Inject mocks
         ReflectionTestUtils.setField(activeMotorTask, "dashboardService", dashboardService);
         ReflectionTestUtils.setField(activeMotorTask, "batteryInfoService", batteryInfoService);
-        ReflectionTestUtils.setField(activeMotorTask, "metricService", metricService);
         ReflectionTestUtils.setField(activeMotorTask, "messagingTemplate", messagingTemplate);
 
         // Set configuration properties
-        ReflectionTestUtils.setField(activeMotorTask, "maxBatteryCapacity", 100.0f);
         ReflectionTestUtils.setField(activeMotorTask, "minBatteryCapacity", 20.0f);
-        ReflectionTestUtils.setField(activeMotorTask, "batteryIncrementCapacity", 1.0f);
         ReflectionTestUtils.setField(activeMotorTask, "batteryDecrementCapacity", 1.0f);
         ReflectionTestUtils.setField(activeMotorTask, "maxBatteryTemperature", 75.0f);
-        ReflectionTestUtils.setField(activeMotorTask, "minBatteryTemperature", 15.0f);
         ReflectionTestUtils.setField(activeMotorTask, "batteryIncrementTemperature", 0.5f);
-        ReflectionTestUtils.setField(activeMotorTask, "batteryDecrementTemperature", 0.5f);
     }
 
     @Test
