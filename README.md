@@ -19,16 +19,24 @@ https://secret-garden-38447-cfa420a113c0.herokuapp.com/api/v1/api-docs
 
 
 ### Local Dev Setup Instructions:
-1. Create Your Local MySQL Database
-   Create a MySQL database and refer to the application.properties file or IntelliJ environment variables setting for the required environment variables.
-2. Configure CORS Settings
+1. Create a local MySQL 8 database and refer to the application.properties file or IntelliJ environment variables setting for the required environment variables.
+```aiignore
+# application.properties
+
+spring.datasource.url=${DB_URL} # update it with your db url jdbc:mysql://localhost:3306/vehicle_dashboard
+spring.datasource.username=${DB_USERNAME} # replace it with your db username
+spring.datasource.password=${DB_PASSWORD} # replace it with your password
+
+```
+   
+3. Configure CORS Settings
    To prevent CORS errors, update the CORS configuration in WebSocketConfig.java and WebConfig.java as follows:
 
 ```aiignore
 // WebSocketConfig.java
 public void registerStompEndpoints(StompEndpointRegistry registry) {
     registry.addEndpoint("/ws")
-            .setAllowedOrigins("*") // Modify this line to have "*"
+            .setAllowedOrigins("http://localhost:5173") // Modify this line 
             .withSockJS()
             .setHeartbeatTime(25000);
 }
@@ -39,7 +47,7 @@ public void registerStompEndpoints(StompEndpointRegistry registry) {
 @Override
 public void addCorsMappings(CorsRegistry registry) {
     registry.addMapping("/**")
-            .allowedOrigins("*") // Modify This line to have "*"
+            .allowedOrigins("*") // Modify This line
             .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
             //.allowCredentials(true) // Remove this line
             .allowedHeaders("*")
@@ -47,7 +55,7 @@ public void addCorsMappings(CorsRegistry registry) {
 }
 ```
 3. Build and Run Your Application
-   Build your application using Maven:
+   Build your application using Maven CMD or your IDE. 
 
 ```aiignore
 ./mvnw clean install
@@ -62,24 +70,15 @@ or
 ```aiignore
 ./mvnw spring-boot:run
 ```
-4. Set Your Environment Variables
-   Set the following environment variables in your IntelliJ IDEA environment settings or place them in application.properties:
-```aiignore
-DB_URL=jdbc:mysql://localhost:3306/<your database name>
-DB_USERNAME=<your user name>
-DB_PASSWORD=<your password>
-FRONTEND_URL=<your front end url>
-```
 
-5. Create Database MySQL 8
-   Create a MySQL 8 database and update the environment variables with the database name, username, and password.
 
 Notes:
-6. Simulation or Emulation of the Scheduling Job
+
+4. Simulation or Emulation of the Scheduling Job
    The scheduling jobs in the /scheduled folder simulate real-world scenarios by updating data periodically under specific conditions:  
    - When the motor is on
    - When the motor is off and charging is off
    - When charging is on
    The temperature, motor speed, motor RPM, and power input are updated based on these conditions.
 
-7. You can also run the application using Docker. Refer to the Dockerfile for more information.
+5. You can also run the application using Docker. Refer to the Dockerfile for more information.
