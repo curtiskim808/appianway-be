@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.*;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
     @Value("${frontend.allowed-origins}")
+
     private String frontendOrigin;
     @Override
     public void addCorsMappings(CorsRegistry registry) {

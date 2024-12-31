@@ -34,7 +34,7 @@ class InactiveMotorTaskTest {
         batteryInfoService = mock(BatteryInfoService.class);
         messagingTemplate = mock(SimpMessagingTemplate.class);
 
-        InactiveMotorTask = new InactiveMotorTask(schedulerController);
+        InactiveMotorTask = new InactiveMotorTask(schedulerController, dashboardService, batteryInfoService, messagingTemplate);
         // Inject mocks
         ReflectionTestUtils.setField(InactiveMotorTask, "dashboardService", dashboardService);
         ReflectionTestUtils.setField(InactiveMotorTask, "batteryInfoService", batteryInfoService);
