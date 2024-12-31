@@ -1,4 +1,4 @@
-## Vehicle Dashboard Application
+## Vehicle Dashboard Application Backend
 
 ### Overview
 
@@ -13,8 +13,12 @@ Prerequisites:
 
 https://docs.google.com/document/d/1t4sMQC7izzmQ98fK74Y-Zo6FlTWfywD9GSzChE-UD9s/edit?usp=sharing
 
+### API Documentation
+For detailed API documentation, refer to the API Documentation.
+https://secret-garden-38447-cfa420a113c0.herokuapp.com/api/v1/api-docs
 
-Local Dev Setup Instructions:
+
+### Local Dev Setup Instructions:
 1. Create Your Local MySQL Database
    Create a MySQL database and refer to the application.properties file or IntelliJ environment variables setting for the required environment variables.
 2. Configure CORS Settings
@@ -78,6 +82,4 @@ Notes:
    - When charging is on
    The temperature, motor speed, motor RPM, and power input are updated based on these conditions.
 
-7. API Documentation
-   For detailed API documentation, refer to the API Documentation.
-   https://secret-garden-38447-cfa420a113c0.herokuapp.com/api/v1/api-docs
+7. You can also run the application using Docker. Refer to the Dockerfile for more information.

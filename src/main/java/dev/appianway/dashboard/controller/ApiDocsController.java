@@ -35,8 +35,8 @@ public class ApiDocsController {
         endpoints.add(new ApiEndpoint("PUT", "/dashboards/{dashboardId}/metrics", "Update a metric for a dashboard", "{ \"id\": 17, \"type\": \"MOTOR_SPEED\", \"value\": 0, \"unit\": \"x200\" }"));
 
         // Dashboard setup endpoints for admin
-        endpoints.add(new ApiEndpoint("POST", "/api/dashboard/setup", "Setup initial data from admin user", "Response 204 NO CONTENT\n No response body"));
-        endpoints.add(new ApiEndpoint("POST", "/api/dashboard/new-dashboard-set", "Create a new dashboard set from admin user", "{ \"uuid\": \"26dd70c0-caef-4b56-b3ba-b764153eb475\", \"name\": \"Main Vehicle Dashboard\", \"createdAt\": \"2024-12-30T20:45:34.753478\", \"updatedAt\": null }"));
+        endpoints.add(new ApiEndpoint("POST", "/dashboards/setup", "Setup initial data from admin user", "Response 204 NO CONTENT\n No response body"));
+        endpoints.add(new ApiEndpoint("POST", "/dashboards/new-dashboard-set", "Create a new dashboard set from admin user", "{ \"uuid\": \"26dd70c0-caef-4b56-b3ba-b764153eb475\", \"name\": \"Main Vehicle Dashboard\", \"createdAt\": \"2024-12-30T20:45:34.753478\", \"updatedAt\": null }"));
 
         model.addAttribute("endpoints", endpoints);
         return "api-docs";
