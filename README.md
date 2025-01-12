@@ -19,6 +19,13 @@ https://secret-garden-38447-cfa420a113c0.herokuapp.com/api/v1/api-docs
 
 
 ### Local Dev Setup Instructions:
+#### **Run the application using Docker
+
+Check this repository: https://github.com/curtiskim808/appianway-platform
+This setup provides a simple development environment using Docker containers for both frontend and backend applications. If you are not familiar with Java or don't have a Java environment installed, this setup will help you get started quickly without additional configurations.
+
+#### Or, Run the application on your local machine
+
 1. Create a local MySQL 8 database and refer to the application.properties file or IntelliJ environment variables setting for the required environment variables.
 ```aiignore
 # application.properties
